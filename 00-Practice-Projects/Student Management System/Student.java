@@ -2,16 +2,22 @@
 
 public class Student
 {
-    String name;
-    int prn;
-    double marks[][];
-
+    protected String name;
+    protected int prn;
+    protected double marks[][];
+    protected static int studentCount = 0;
     //constructor to inputting values.
     public Student(String name, int prn, double marks[][])
     {
         this.name=name;
         this.prn=prn;
         this.marks=marks;
+        studentCount++;
+    }
+
+    public int getStudentCount()
+    {
+        return studentCount;
     }
 
     public double calculateAverage()
